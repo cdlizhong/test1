@@ -12,6 +12,7 @@
 		3852D1EE1C30A6F9006E8669 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852D1ED1C30A6F9006E8669 /* OpenGL.framework */; };
 		3852D1F01C30A6FE006E8669 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852D1EF1C30A6FE006E8669 /* GLUT.framework */; };
 		3883801F1C17134F00168D61 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3883801E1C17134F00168D61 /* main.cpp */; };
+		96FB3FD61C3255A0004D3E54 /* ByteArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96FB3FD41C3255A0004D3E54 /* ByteArray.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,8 @@
 		3852D1EF1C30A6FE006E8669 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		3883801B1C17134F00168D61 /* test1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test1; sourceTree = BUILT_PRODUCTS_DIR; };
 		3883801E1C17134F00168D61 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		96FB3FD41C3255A0004D3E54 /* ByteArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ByteArray.cpp; sourceTree = "<group>"; };
+		96FB3FD51C3255A0004D3E54 /* ByteArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ByteArray.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				3883801E1C17134F00168D61 /* main.cpp */,
+				96FB3FD41C3255A0004D3E54 /* ByteArray.cpp */,
+				96FB3FD51C3255A0004D3E54 /* ByteArray.hpp */,
 				3852D1D81C2E35F9006E8669 /* sort.cpp */,
 				3852D1D91C2E35F9006E8669 /* sort.hpp */,
 				3852D1D21C2A1B8E006E8669 /* shift.cpp */,
@@ -137,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3852D1D41C2A1B8E006E8669 /* shift.cpp in Sources */,
+				96FB3FD61C3255A0004D3E54 /* ByteArray.cpp in Sources */,
 				3883801F1C17134F00168D61 /* main.cpp in Sources */,
 				3852D1DA1C2E35F9006E8669 /* sort.cpp in Sources */,
 			);

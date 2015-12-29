@@ -11,35 +11,57 @@
 
 #include "shift.hpp"
 #include "sort.hpp"
+#include "ByteArray.hpp"
 
 using namespace std;
 
-#include <GLUT/GLUT.h>
-void display()
-{
-    glClear(GL_COLOR_BUFFER_BIT);
-    glBegin(GL_POLYGON);
-    glVertex2f(-0.5, -0.5);
-    glVertex2f(-0.5, 0.5);
-    glVertex2f(0.5, 0.5);
-    glVertex2f(0.5, -0.5);
-    glEnd();
-    glFlush();
-}
-int main(int argc, char ** argv)
-{
-    glutInit(&argc, argv);
-    glutCreateWindow("Xcode Glut Demo");
-    glutDisplayFunc(display);
-    glutMainLoop();
-}
+//#include <GLUT/GLUT.h>
+//void display()
+//{
+//    glClear(GL_COLOR_BUFFER_BIT);
+//    glBegin(GL_POLYGON);
+//    glVertex2f(-0.5, -0.5);
+//    glVertex2f(-0.5, 0.5);
+//    glVertex2f(0.5, 0.5);
+//    glVertex2f(0.5, -0.5);
+//    glEnd();
+//    glFlush();
+//}
+//int main(int argc, char ** argv)
+//{
+//    glutInit(&argc, argv);
+//    glutCreateWindow("Xcode Glut Demo");
+//    glutDisplayFunc(display);
+//    glutMainLoop();
+//}
 
-//int main(int argc, const char * argv[]) {
-//    
-//    printf("hello hello!\n");
+
+int main(int argc, const char * argv[]) {
+    
+    printf("hello hello!\n");
+    int len = newByteArray(14);
+    char a[len];
+    initByteArray(a, len);
+    setByteAtIndex(a, 1);
+    setByteAtIndex(a, 5);
+    setByteAtIndex(a, 8);
+    setByteAtIndex(a, 9);
+    setByteAtIndex(a, 14);
+    clearByteAtIndex(a, 1);
+    clearByteAtIndex(a, 5);
+    setByteAtIndex(a, 12);
+
+
+    for (int i=1; i<=14; i++)
+    {
+        int ret = getByteByIndex(a, i);
+        cout<<ret<<" ";
+    }
+    cout<<endl;
+//    int ret1 = getByte(a, 2);
 //    initRandom();
-//
-//    
+
+    
 //    int len = 10;
 //    int arr[len];
 //
@@ -48,18 +70,18 @@ int main(int argc, char ** argv)
 //        cout<<arr[i]<<" ";
 //    }
 //    cout<<endl;
-////    insertSort(arr, len);
-////    quickSort(arr, 0,len-1);
-////    buildMaxHeap(arr, len-1);
+//    insertSort(arr, len);
+//    quickSort(arr, 0,len-1);
+//    buildMaxHeap(arr, len-1);
 //    heapSort(arr, len-1);
 //    for (int i = 0; i<len; i++) {
 //        cout<<arr[i]<<" ";
 //    }
 //    cout<<endl;
-//    
-//    
-//    return 0;
-//}
+    
+    
+    return 0;
+}
 
 
 
