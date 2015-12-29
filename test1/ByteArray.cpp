@@ -9,8 +9,9 @@
 #include "ByteArray.hpp"
 #include <iostream>
 
+//下标从0开始
 
-int newByteArray(int len)
+int newByteArray(int len) // len 数组的长度
 {
     int ret = (len -1)/CHAR_BIT + 1;
     return ret;
@@ -25,23 +26,23 @@ void initByteArray(char a[],int len)
 
 void setByteAtIndex(char a[],int index)
 {
-    int num = (index-1)%CHAR_BIT;
-    int charIndex = (index -1)/CHAR_BIT;
+    int num = index%CHAR_BIT;
+    int charIndex = index/CHAR_BIT;
     a[charIndex] |= 0x80>>num;
 }
 
 void clearByteAtIndex(char a[],int index)
 {
-    int num = (index-1)%CHAR_BIT;
-    int charIndex = (index -1)/CHAR_BIT;
+    int num = index%CHAR_BIT;
+    int charIndex = index/CHAR_BIT;
     
     a[charIndex] &= 0x7F>>num;
 }
 
 int getByteByIndex(char a[],int index)
 {
-    int num = (index-1)%CHAR_BIT;
-    int charIndex = (index -1)/CHAR_BIT;
+    int num = index%CHAR_BIT;
+    int charIndex = index/CHAR_BIT;
     char e = a[charIndex];
     int ret = e & 0x80>>num;
     return ret == 0 ?0:1;

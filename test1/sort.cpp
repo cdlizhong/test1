@@ -7,6 +7,7 @@
 //
 
 #include "sort.hpp"
+#include "ByteArray.hpp"
 using namespace std;
 
 
@@ -26,6 +27,57 @@ void createArrayRandom(int arr[],int len,int min,int max)
     for (int i = 0; i<len; i++) {
         int a = random(min, max);
         arr[i] = a;
+    }
+}
+
+// 生成[min max)之间count个不同的随机顺序的随机整数
+void randomCreateArray_1(int result[],int min,int max,int count)
+{
+    initRandom();
+    const int n = max-min;
+    const int k = count;
+    int len = newByteArray(n);
+    char a[len];
+    initByteArray(a, len);
+    int i = 0;
+    while(i!=k)
+    {
+        int num = random(0, max-min-1);
+        if(getByteByIndex(a, num) == 0)
+        {
+            setByteAtIndex(a, num);
+            result[i] = num +  min;
+            i++;
+        }
+    }
+    for (int i=0; i<k; i++)
+    {
+        cout<<result[i]<<" ";
+    }
+}
+
+void randomCreateArray(int result[],int min,int max,int count)
+{
+    initRandom();
+    const int n = max-min;
+    const int k = count;
+    int a[n];
+    for(int i = 0;i<n;i++)
+    {
+        a[i] = i;
+    }
+    for(int i=0;i<k;i++)
+    {
+        int index = random(i,n-1);
+        int temp = a[index];
+        a[index] = a[i];
+        a[i] = temp;
+        result[i] = temp;
+    }
+    
+    for (int i=0; i<k; i++)
+    {
+        cout<<result[i]<<" ";
     }
 }
 

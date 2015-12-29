@@ -36,28 +36,21 @@ using namespace std;
 //}
 
 
+
+
 int main(int argc, const char * argv[]) {
     
     printf("hello hello!\n");
-    int len = newByteArray(14);
-    char a[len];
-    initByteArray(a, len);
-    setByteAtIndex(a, 1);
-    setByteAtIndex(a, 5);
-    setByteAtIndex(a, 8);
-    setByteAtIndex(a, 9);
-    setByteAtIndex(a, 14);
-    clearByteAtIndex(a, 1);
-    clearByteAtIndex(a, 5);
-    setByteAtIndex(a, 12);
+    
+    int ret[10];
+    randomCreateArray(ret, 0, 10, 10);
 
-
-    for (int i=1; i<=14; i++)
-    {
-        int ret = getByteByIndex(a, i);
-        cout<<ret<<" ";
-    }
-    cout<<endl;
+//    for (int i=1; i<=14; i++)
+//    {
+//        int ret = getByteByIndex(a, i);
+//        cout<<ret<<" ";
+//    }
+//    cout<<endl;
 //    int ret1 = getByte(a, 2);
 //    initRandom();
 

@@ -19,6 +19,9 @@ void initRandom();
 
 void createArrayRandom(int arr[],int len,int min,int max);
 
+void randomCreateArray(int result[],int min,int max,int count);
+void randomCreateArray_1(int result[],int min,int max,int count);
+
 void insertSort(int arr[],int arrLen);
 
 void selectSort(int arr[],int arrLen);
