@@ -170,7 +170,7 @@ void mergeSort(int arr[],int p,int r)
 
 int partition(int arr[],int p,int r)
 {
-    printf("partition p=%d r=%d \n",p,r);
+//    printf("partition p=%d r=%d \n",p,r);
     int x = arr[r];
     int i = p -1 ;
     for(int j = p;j<r;j++)
@@ -186,11 +186,11 @@ int partition(int arr[],int p,int r)
     int temp = arr[i+1];
     arr[i+1] = x;
     arr[r] = temp;
-    for (int i = p; i<=r; i++) {
-        cout<<arr[i]<<" ";
-    }
-    cout<<" i="<<i+1;
-    cout<<endl;
+//    for (int i = p; i<=r; i++) {
+//        cout<<arr[i]<<" ";
+//    }
+//    cout<<" i="<<i+1;
+//    cout<<endl;
     return i+1;
 }
 
@@ -262,10 +262,10 @@ void buildMaxHeap(int arr[],int arrLen)
 void heapSort(int arr[],int arrLen)
 {
     buildMaxHeap(arr, arrLen);
-    for (int i = 0; i<arrLen+1; i++) {
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
+//    for (int i = 0; i<arrLen+1; i++) {
+//        cout<<arr[i]<<" ";
+//    }
+//    cout<<endl;
     int heapSize = arrLen;
     for(int i = arrLen;i>=1;i--)
     {
