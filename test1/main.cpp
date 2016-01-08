@@ -12,6 +12,7 @@
 #include "shift.hpp"
 #include "sort.hpp"
 #include "ByteArray.hpp"
+#include "search.hpp"
 
 using namespace std;
 
@@ -35,15 +36,19 @@ using namespace std;
 //    glutMainLoop();
 //}
 
-
+void assert(bool flag,char *str)
+{
+    if(flag == false)
+        cout<<str<<endl;
+}
 
 
 int main(int argc, const char * argv[]) {
     
     printf("hello hello!\n");
-    
-    int ret[10];
-    randomCreateArray(ret, 0, 10, 10);
+//    
+//    int ret[10];
+//    randomCreateArray(ret, 0, 10, 10);
 
 //    for (int i=1; i<=14; i++)
 //    {
@@ -55,10 +60,10 @@ int main(int argc, const char * argv[]) {
 //    initRandom();
 
     
-//    int len = 10;
-//    int arr[len];
+    int len = 1000;
+    int arr[len];
 //
-//    createArrayRandom(arr,len, 1, 10);
+    createArrayRandom(arr,len, 1, 1000);
 //    for (int i = 0; i<len; i++) {
 //        cout<<arr[i]<<" ";
 //    }
@@ -71,8 +76,43 @@ int main(int argc, const char * argv[]) {
 //        cout<<arr[i]<<" ";
 //    }
 //    cout<<endl;
+//    int len = newByteArray(14);
+//    char a[len];
+//    initByteArray(a, len);
+//    setByteAtIndex(a, 1);
+//    setByteAtIndex(a, 5);
+//    setByteAtIndex(a, 8);
+//    setByteAtIndex(a, 9);
+//    setByteAtIndex(a, 13);
+//    clearByteAtIndex(a, 1);
+//    clearByteAtIndex(a, 5);
+//    setByteAtIndex(a, 12);
+//    for (int i=0; i<14; i++)
+//    {
+//        int ret = getByteByIndex(a, i);
+//        cout<<ret<<" ";
+//    }
+//    cout<<endl;
+//    int a[10] = {31,-41,59,26,-53,58,97,-93,-23,84};
+    clock_t start = clock();
+//    int index = binarySearch(a, 10, 10);
+//    insertSort(arr, len);
+//        quickSort(arr, 0,len-1);
+//        buildMaxHeap(arr, len-1);
+//        heapSort(arr, len-1);
+    int max = maxContinousSub_2(arr, 1000);
+    clock_t end = clock();
+    double duration = (double)(end-start)/CLOCKS_PER_SEC;
+    printf("time %f \n",duration);
+    for (int i = 0; i<len; i++) {
+        cout<<arr[i]<<" ";
+    }
+    cout<<"max="<<max<<endl;
+//
+//
     
     
+
     return 0;
 }
 

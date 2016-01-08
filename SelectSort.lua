@@ -104,6 +104,7 @@ function findRight()
 
 end
 
+-- 找出AB的子集
 function findInterSection(A,B)
 	local ret = {}
 	local aa = {}
@@ -121,18 +122,40 @@ function findInterSection(A,B)
 	end
 end
 
+
+function binarySearch(A,e)
+	local i = 1
+	local k = #A
+	while i <= k do
+		local mid = (k + i)/2
+		if A[mid] == e then
+			return mid
+		elseif A[mid] < e then
+			i = mid + 1
+		elseif A[mid] > e then
+			k = mid -1
+		end
+	end
+	return -1
+end
+
+
 -- findRight()
-local a = createRandomArray(5,10)
-a.cout()
-print("---")
-local b = createRandomArray(5,10)
-b.cout()
-print("---")
-findInterSection(a,b)
+-- local a = createRandomArray(5,10)
+-- a.cout()
+-- print("---")
+-- local b = createRandomArray(5,10)
+-- b.cout()
+-- print("---")
+-- findInterSection(a,b)
 -- array = createRandomArray(100000,100)
 -- array.cout()
 -- quickSort(array,1,#array)
 -- array.cout()
+
+local A = {1,2,3,4,5,6,7,8,9,10}
+local ret = binarySearch(A,4)
+print("ret:"..ret)
 
 
 
