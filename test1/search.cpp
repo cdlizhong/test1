@@ -29,6 +29,21 @@ int binarySearch(int a[],int len,int e)
     return -1;
 }
 
+int binarySearch2(int a[],int e ,int l,int r)
+{
+    if(l > r)
+        return -1;
+    int m = (l+r)/2;
+    if(a[m] < e)
+    {
+        return binarySearch2(a, e, m+1, r);
+    }else if(a[m] > e)
+    {
+        return binarySearch2(a, e, l, m-1);
+    }
+    return m;
+}
+
 int maxContinousSub_1(int a[],int len)
 {
     int maxsofa = 0;

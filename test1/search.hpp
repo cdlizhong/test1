@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 int binarySearch(int a[],int len,int e);
+int binarySearch2(int a[],int e,int l,int r);
 int maxContinousSub_1(int a[],int len);
 int maxContinousSub_2(int a[],int len);
 
